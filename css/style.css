@@ -16,7 +16,6 @@ nav.black {
 
 nav .logo {
 	padding: 22px 20px;
-	height: 80px;
 	float: left;
 	font-size: 24px;
 	transition: .3s;
@@ -29,14 +28,31 @@ nav ul {
 	float: right;
 	display: flex;
 	list-style: none;
-	margin: 30px 0px 0px 0px; padding: 0;
+	margin: 20px 0px; padding: 0;
 }
 nav ul li {list-style: none}
 
 nav ul li a {
+	position: relative;
+	display: inline-block;
 	line height: 80px;
 	padding: 12px 30px;
 }
+nav ul li a:not(.login)::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background-color: #151515;
+	transition: .3s;
+}
+nav ul li a:hover::after {
+	width: 100%;
+}
+nav.black ul li a::after {
+	background-color: #fff;
+}
+
 nav.black ul li a {color: #fff;}
 nav ul li a:focus {outline: none;}
 
