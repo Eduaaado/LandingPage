@@ -16,14 +16,3 @@ $(window).on('scroll', function() {
 });
 
 //TEXT REVEAL
-
-$(document).ready(function() {
-	$(window).scroll(function() {
-		var y = $(this).scrollTop();
-
-		if (y > 300) {
-			$('h1').addClass('textanimation')
-			$('div').addClass('blockanimation')
-		}
-	});
-});
